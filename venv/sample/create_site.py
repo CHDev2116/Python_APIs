@@ -4,9 +4,9 @@ import json
 url = "https://api-v2.mlytics.co/mdns/v2/_internal/zone/"
 
 payload = json.dumps({
-  "org_id": "1001662431868",
+  "org_id": "1001659593134",
   "zone": {
-    "domain": "plat5892.com",
+    "domain": "fqdntest.com",
     "status": 1
   },
   "rrsets": []

@@ -7,12 +7,12 @@ import string
 def send_req():
     url = "https://api-v2.mlytics.co/mdns/v2/_internal/zone/"
     name = ''.join(random.sample((string.digits + string.ascii_lowercase), 4))
-    domain = "plat5892.com"
+    domain = "fqdntest.com"
 
     payload = json.dumps({
-        "org_id": "1001662431868",
+        "org_id": "1001659593134",
         "zone": {
-            "zone_id": "2154cd45-6aa2-4444-9e78-f4a7efe774a8",
+            "zone_id": "bed9c178-cfc0-44cd-b1e9-daacbedca3dc",
             "domain": domain,
             "status": 1
         },
@@ -41,6 +41,6 @@ def send_req():
 
 
 if __name__ == '__main__':
-    for i in range(91):
+    for i in range(1):
         send_req()
         print(i)
