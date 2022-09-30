@@ -12,7 +12,7 @@ def send_req():
     payload = json.dumps({
         "org_id": "1001659593134",
         "zone": {
-            "zone_id": "bed9c178-cfc0-44cd-b1e9-daacbedca3dc",
+            "zone_id": "1b7e3a61-4cb4-4974-b90c-8eef88644194",
             "domain": domain,
             "status": 1
         },
@@ -38,6 +38,11 @@ def send_req():
 
     response = requests.request("POST", url, headers=headers, data=payload)
     print(response.text)
+
+    if response.status_code == 200:
+        print('Success!')
+    elif response.status_code == 404:
+        print('Not Found.')
 
 
 if __name__ == '__main__':
